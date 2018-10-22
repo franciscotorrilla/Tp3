@@ -18,7 +18,7 @@ class Lista {
 
         void insertar ( Tipo* e, unsigned pos);
 
-        //pre 0 < pos <= obtenerLongitud()
+        //pre 0 < pos <= obtenerLongitud()i='1'
         // pos quita el dato de la lista y libera la memoria
 
         void borrar( unsigned pos);
@@ -36,6 +36,10 @@ class Lista {
 
         void opciones(char i);
 
+        void agregarObjeto();
+
+        void mostrarListadoObjetos();
+
         void consultarSuperficieMaxima();
 
         void consultarSuperficieMinima();
@@ -43,8 +47,6 @@ class Lista {
         void consultarPerimetroMaximo();
 
         void consultarPerimetroMinimo();
-
-        void mostrarListadoObjetos();
 };
 
 #endif // LISTA_H

@@ -1,5 +1,7 @@
 #include "Lista.h"
 #include <iostream>
+#include <unistd.h>
+#include <stdlib.h>
 using namespace std;
 
 Lista::Lista() {
@@ -63,9 +65,21 @@ void Lista::borrar(unsigned pos) {
 }
 
 void Lista::menu(){
-    char i = 9;
+    char i;
+    cout << "Ingrese 1 para consultar que objeto hay en determinada posicion." <<endl;
+    cout << "Ingrese 2 para dar de baja un objeto en determinada posicion." <<endl;
+    cout << "Ingrese 3 para agregar un nuevo objeto de manera manual." <<endl;
+    cout << "Ingrese 4 para listar todos los objetos." << endl;
+    cout << "Ingrese 5 para consultar la superficie maxima." <<endl;
+    cout << "Ingrese 6 para consultar la superficie minima." <<endl;
+    cout << "Ingrese 7 para consultar el perimetro maximo." <<endl;
+    cout << "Ingrese 8 para consultar el perimetro minimo."<<endl;
+    cin >> i;
+    system("cls");
+    opciones(i);
     while (i != '0'){
-		cout << "Ingrese 0 para cerrar el menu." <<endl;
+        sleep(2);
+        cout << "Ingrese 0 para cerrar el menu." <<endl;
 		cout << "Ingrese 1 para consultar que objeto hay en determinada posicion." <<endl;
 		cout << "Ingrese 2 para dar de baja un objeto en determinada posicion." <<endl;
 		cout << "Ingrese 3 para agregar un nuevo objeto de manera manual." <<endl;
@@ -75,6 +89,7 @@ void Lista::menu(){
 		cout << "Ingrese 7 para consultar el perimetro maximo." <<endl;
 		cout << "Ingrese 8 para consultar el perimetro minimo."<<endl;
 		cin >> i;
+		system("cls");
 		opciones(i);
     	}
     }
@@ -85,22 +100,25 @@ void Lista::opciones(char i){
         case '1':
             cout << "Ingrese la posicion: ";
             cin >> pos;
-            consultar(pos)->mostrar();
+            if (pos<=longitud)
+                consultar(pos)->mostrar();
+            else
+                cout << "No hay elemento en dicha posicion." <<endl;
             break;
         case '2':
             cout << "Ingrese la posicion: ";
             cin >> pos;
-            borrar(pos);
+            if (pos<=longitud){
+                cout << "Se ha dado de baja al ";
+                consultar(pos)->mostrar();
+                borrar(pos);
+                }
+            else
+                cout << "No hay elemento en dicha posicion." <<endl;
             break;
-        case '3':
-          /*  Tipo* e;
-            cout << "Ingrese la posicion: ";
-            cin >> pos;
-            insertar(e, pos);
-*/
+        case '3': agregarObjeto();
             break;
-        case '4':
-            mostrarListadoObjetos();
+        case '4': mostrarListadoObjetos();
             break;
         case '5': consultarSuperficieMaxima();
             break;
@@ -110,7 +128,8 @@ void Lista::opciones(char i){
             break;
         case '8': consultarPerimetroMinimo();
             break;
-        }
+        default: cout << "Dato ingresado invalido" << endl;
+            }
         cout<< endl;
        }
 
@@ -158,12 +177,48 @@ void Lista::consultarPerimetroMinimo(){
     cout << "El perimetro minimo es de: " << valorMinimo <<endl;
 }
 
-void Lista:: mostrarListadoObjetos(){
+void Lista::mostrarListadoObjetos(){
 	for (unsigned pos = 1; pos <= longitud; pos++){
+        cout << pos << ") ";
 		consultar(pos)->mostrar();
 		}
 }
 
+void Lista::agregarObjeto(){
+    char i;
+    cout << "Ingrese 1 si quiere agregar un cuadrado." <<endl;
+    cout << "Ingrese 2 si quiere agregar un rectangulo." <<endl;
+    cout << "Ingrese 3 si quiere agregar un circulo."<< endl;
+    cin >> i;
+    double dato, dato2;
+    Figura* figura;
+    switch (i){
+        case '1':
+            cout << "Ingrese la longitud del lado: ";
+            cin >> dato;
+            figura = new Cuadrado(dato);
+            break;
+        case '2':
+            cout << "Ingrese la longitud del primer lado: ";
+            cin >> dato;
+            cout << "Ingrese la longitud del segundo lado: ";
+            cin >> dato2;
+            figura = new Rectangulo(dato,dato2);
+            break;
+        case '3':
+            cout << "Ingrese la longitud del rado: ";
+            cin >> dato;
+            figura = new Circulo(dato);
+            break;
+        default:
+            cout << "Dato ingresado invalido" << endl;
+            agregarObjeto();
+        }
+        if (i=='1' || i=='2' || i=='3'){
+            insertar(figura, longitud+1);
+            cout << "Se ha agregado el objeto correctamente" <<endl;
+            }
+}
 
 
 
