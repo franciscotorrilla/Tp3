@@ -16,7 +16,7 @@ return lado * 4;
 }
 
 void Cuadrado ::mostrar() {
-cout << "Cuadrado de superficie " << superficie() << "y perimetro " << perimetro() << endl;
+cout << "Cuadrado de superficie " << superficie() << " y perimetro " << perimetro() << endl;
 }
 
 
@@ -33,7 +33,7 @@ return radio * 2 * 3.1416;
 }
 
 void Circulo::mostrar() {
-cout << "Circulo de superficie " << superficie() << "y perimetro " << perimetro() << endl;
+cout << "Circulo de superficie " << superficie() << " y perimetro " << perimetro() << endl;
 }
 
 Rectangulo::Rectangulo(double lado1, double lado2){
@@ -50,6 +50,6 @@ return (2 * lado1) + (2 * lado2);
 }
 
 void Rectangulo::mostrar() {
-cout << "Rectangulo de superficie " << superficie() << "y perimetro " << perimetro() << endl;
+cout << "Rectangulo de superficie " << superficie() << " y perimetro " << perimetro() << endl;
 }
 
