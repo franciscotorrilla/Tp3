@@ -75,7 +75,7 @@ void Lista::menu(){
     cout << "Ingrese 7 para consultar el perimetro maximo." <<endl;
     cout << "Ingrese 8 para consultar el perimetro minimo."<<endl;
     cin >> i;
-    system("cls");
+    system("CLS");
     opciones(i);
     while (i != '0'){
         sleep(2);
@@ -89,7 +89,7 @@ void Lista::menu(){
 		cout << "Ingrese 7 para consultar el perimetro maximo." <<endl;
 		cout << "Ingrese 8 para consultar el perimetro minimo."<<endl;
 		cin >> i;
-		system("cls");
+		system("CLS");
 		opciones(i);
     	}
     }
@@ -97,6 +97,8 @@ void Lista::menu(){
 void Lista::opciones(char i){
     unsigned pos;
     switch (i){
+		case '0':
+			break;
         case '1':
             cout << "Ingrese la posicion: ";
             cin >> pos;
@@ -116,9 +118,9 @@ void Lista::opciones(char i){
             else
                 cout << "No hay elemento en dicha posicion." <<endl;
             break;
-        case '3': agregarObjeto();
+        case '3': agregarFigura();
             break;
-        case '4': mostrarListadoObjetos();
+        case '4': mostrarListadoFiguras();
             break;
         case '5': consultarSuperficieMaxima();
             break;
@@ -177,14 +179,14 @@ void Lista::consultarPerimetroMinimo(){
     cout << "El perimetro minimo es de: " << valorMinimo <<endl;
 }
 
-void Lista::mostrarListadoObjetos(){
+void Lista::mostrarListadoFiguras(){
 	for (unsigned pos = 1; pos <= longitud; pos++){
         cout << pos << ") ";
 		consultar(pos)->mostrar();
 		}
 }
 
-void Lista::agregarObjeto(){
+void Lista::agregarFigura(){
     char i;
     cout << "Ingrese 1 si quiere agregar un cuadrado." <<endl;
     cout << "Ingrese 2 si quiere agregar un rectangulo." <<endl;
@@ -212,7 +214,7 @@ void Lista::agregarObjeto(){
             break;
         default:
             cout << "Dato ingresado invalido" << endl;
-            agregarObjeto();
+            agregarFigura();
         }
         if (i=='1' || i=='2' || i=='3'){
             insertar(figura, longitud+1);
