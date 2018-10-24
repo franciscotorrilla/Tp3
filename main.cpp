@@ -1,13 +1,14 @@
+#include "miniwin.h"
 #include <iostream>
 #include <fstream>
 #include "Figura.h"
 #include "Lista.h"
 using namespace std;
-
 //void menu();
 //void opciones();
 
 int main(){
+    miniwin::vredimensiona(500,500);
     ifstream archivo;
     archivo.open("figuras.txt");
     char character;
@@ -33,9 +34,5 @@ int main(){
     lista.menu();
 
     archivo.close();
+    return 0;
 }
-
-
-
-
-

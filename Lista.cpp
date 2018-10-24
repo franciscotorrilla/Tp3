@@ -2,6 +2,7 @@
 #include <iostream>
 #include <unistd.h>
 #include <stdlib.h>
+#include "miniwin.h"
 using namespace std;
 
 Lista::Lista() {
@@ -65,20 +66,12 @@ void Lista::borrar(unsigned pos) {
 }
 
 void Lista::menu(){
-    char i;
-    cout << "Ingrese 1 para consultar que objeto hay en determinada posicion." <<endl;
-    cout << "Ingrese 2 para dar de baja un objeto en determinada posicion." <<endl;
-    cout << "Ingrese 3 para agregar un nuevo objeto de manera manual." <<endl;
-    cout << "Ingrese 4 para listar todos los objetos." << endl;
-    cout << "Ingrese 5 para consultar la superficie maxima." <<endl;
-    cout << "Ingrese 6 para consultar la superficie minima." <<endl;
-    cout << "Ingrese 7 para consultar el perimetro maximo." <<endl;
-    cout << "Ingrese 8 para consultar el perimetro minimo."<<endl;
-    cin >> i;
-    system("CLS");
-    opciones(i);
+
+    char i = '1';
     while (i != '0'){
         sleep(2);
+        		system("CLS");
+
         cout << "Ingrese 0 para cerrar el menu." <<endl;
 		cout << "Ingrese 1 para consultar que objeto hay en determinada posicion." <<endl;
 		cout << "Ingrese 2 para dar de baja un objeto en determinada posicion." <<endl;
@@ -92,6 +85,7 @@ void Lista::menu(){
 		system("CLS");
 		opciones(i);
     	}
+    miniwin::vcierra();
     }
 
 void Lista::opciones(char i){
