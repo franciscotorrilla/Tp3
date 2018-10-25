@@ -4,9 +4,6 @@
 #include "Lista.h"
 using namespace std;
 
-//void menu();
-//void opciones();
-
 int main(){
     ifstream archivo;
     archivo.open("figuras.txt");
