@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1540418578 source:c:\users\win7\desktop\proyectos codeblocks\tp3\main.cpp
+	"miniwin.h"
+	<iostream>
+	<fstream>
+	"Figura.h"
+	"Lista.h"
+
+1461828820 c:\users\win7\desktop\proyectos codeblocks\tp3\miniwin.h
+	<iostream>
+
+1540326682 source:c:\users\win7\desktop\proyectos codeblocks\tp3\miniwin.cpp
+	<fstream>
+	<sstream>
+	<queue>
+	<math.h>
+	<process.h>
+	<windows.h>
+	<windowsx.h>
+	"miniwin.h"
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<string>
+	<queue>
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/Xos.h>
+	<X11/Xatom.h>
+	<X11/keysym.h>
+	"miniwin.h"
+
+1540394448 source:c:\users\win7\desktop\proyectos codeblocks\tp3\123.cpp
+	"miniwin.h"
+	<iostream>
+	<fstream>
+	"Figura.h"
+	"Lista.h"
+
+1540260489 c:\users\win7\desktop\proyectos codeblocks\tp3\figura.h
+
+1540431350 c:\users\win7\desktop\proyectos codeblocks\tp3\lista.h
+	"Nodo.h"
+
+1540260489 c:\users\win7\desktop\proyectos codeblocks\tp3\nodo.h
+	"Figura.h"
+
+1540413870 source:c:\users\win7\desktop\proyectos codeblocks\tp3\figura.cpp
+	"Figura.h"
+	<iostream>
+	<string>
+	"miniwin.h"
+
+1540425191 source:c:\users\win7\desktop\proyectos codeblocks\tp3\lista.cpp
+	"Lista.h"
+	<iostream>
+	<unistd.h>
+	<stdlib.h>
+	"miniwin.h"
+
+1540260489 source:c:\users\win7\desktop\proyectos codeblocks\tp3\nodo.cpp
+	"Nodo.h"
+
