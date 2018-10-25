@@ -15,6 +15,7 @@ class Nodo {
 	Nodo* obtenerSiguiente();
 	void asignarSiguiente(Nodo* punteroNodo);
 	void asignarDato(Tipo* dato);
+	~Nodo();
 };
 
 #endif // NODO_H

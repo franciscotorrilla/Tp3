@@ -2,7 +2,6 @@
 #include <iostream>
 using namespace std;
 
-
 Cuadrado::Cuadrado(double lado){
 this->lado = lado;
 }

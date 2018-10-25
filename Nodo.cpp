@@ -18,3 +18,6 @@ Nodo* Nodo::obtenerSiguiente(){
 	return siguiente;
 }
 
+Nodo::~Nodo(){
+    delete dato;
+}

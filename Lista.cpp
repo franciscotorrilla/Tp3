@@ -13,6 +13,7 @@ Lista::~Lista () {
 	while(longitud > 0) {
 		borrar(1);
 	}
+
 }
 
 bool Lista::listaVacia() {
@@ -63,22 +64,11 @@ void Lista::borrar(unsigned pos) {
 	delete borrar;
 	longitud --;
 }
-
 void Lista::menu(){
-    char i;
-    cout << "Ingrese 1 para consultar que objeto hay en determinada posicion." <<endl;
-    cout << "Ingrese 2 para dar de baja un objeto en determinada posicion." <<endl;
-    cout << "Ingrese 3 para agregar un nuevo objeto de manera manual." <<endl;
-    cout << "Ingrese 4 para listar todos los objetos." << endl;
-    cout << "Ingrese 5 para consultar la superficie maxima." <<endl;
-    cout << "Ingrese 6 para consultar la superficie minima." <<endl;
-    cout << "Ingrese 7 para consultar el perimetro maximo." <<endl;
-    cout << "Ingrese 8 para consultar el perimetro minimo."<<endl;
-    cin >> i;
-    system("CLS");
-    opciones(i);
+
+    char i = '1';
     while (i != '0'){
-        sleep(2);
+
         cout << "Ingrese 0 para cerrar el menu." <<endl;
 		cout << "Ingrese 1 para consultar que objeto hay en determinada posicion." <<endl;
 		cout << "Ingrese 2 para dar de baja un objeto en determinada posicion." <<endl;
@@ -91,8 +81,10 @@ void Lista::menu(){
 		cin >> i;
 		system("CLS");
 		opciones(i);
+		sleep(2);
     	}
     }
+
 
 void Lista::opciones(char i){
     unsigned pos;
@@ -208,7 +200,7 @@ void Lista::agregarFigura(){
             figura = new Rectangulo(dato,dato2);
             break;
         case '3':
-            cout << "Ingrese la longitud del rado: ";
+            cout << "Ingrese la longitud del radio: ";
             cin >> dato;
             figura = new Circulo(dato);
             break;
@@ -217,10 +209,20 @@ void Lista::agregarFigura(){
             agregarFigura();
         }
         if (i=='1' || i=='2' || i=='3'){
-            insertar(figura, longitud+1);
+            unsigned pos;
+            cout << "Ingrese en que posicion se quiere agregar:";
+            cin >> pos;
+            while (pos<1 || pos>longitud+1){
+                cout << "Ingrese una posicion valida:";
+                cin >> pos;
+                }
+            insertar(figura, pos);
             cout << "Se ha agregado el objeto correctamente" <<endl;
             }
-}
+    }
+
+
+
 
 
 

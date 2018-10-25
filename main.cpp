@@ -28,7 +28,6 @@ int main(){
         contador ++;
     }
     lista.menu();
-
     archivo.close();
 }
 
