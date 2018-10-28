@@ -3,7 +3,7 @@
 #include <string>
 #include "miniwin.h"
 using namespace std;
-
+using namespace miniwin;
 
 Cuadrado::Cuadrado(double lado){
 this->lado = lado;
@@ -18,12 +18,14 @@ return lado * 4;
 }
 
 void dibujarRectangulos(double lado1,double lado2,string superficie, string perimetro) {
-    string mensaje = "Cuadrado de superficie " + superficie + " y perimetro " + perimetro;
-    miniwin::texto(10,10,mensaje);
-    miniwin::rectangulo(lado1*25+100,lado2*25+100,50,50);
-    miniwin::refresca();
-    system("pause");
-    miniwin::borra();
+    string mensaje = "Rectangulo de superficie " + superficie + " y perimetro " + perimetro;
+    texto(10,20,mensaje);
+    rectangulo(lado1*25+100,lado2*25+100,50,50);
+    refresca();
+    texto(5,450,"Enter para continuar...");
+    refresca();
+    while(tecla() != RETURN);
+    borra();
 }
 
 void Cuadrado ::mostrar() {
@@ -33,11 +35,13 @@ void Cuadrado ::mostrar() {
 
 void dibujarCirculo(double radio, string superficie, string perimetro) {
     string mensaje = "Circulo de superficie " + superficie + " y perimetro " + perimetro;
-    miniwin::texto(10,10,mensaje);
-    miniwin::circulo(250,250,radio*15);
-    miniwin::refresca();
-    system("pause");
-    miniwin::borra();
+    texto(10,20,mensaje);
+    circulo(250,250,radio*15);
+    refresca();
+    texto(5,450,"Enter para continuar...");
+    refresca();
+    while(tecla() != RETURN);
+    borra();
 }
 
 Circulo::Circulo(double radio){

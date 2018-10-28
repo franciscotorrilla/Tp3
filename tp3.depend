@@ -61,3 +61,58 @@
 1540260489 source:c:\users\win7\desktop\proyectos codeblocks\tp3\nodo.cpp
 	"Nodo.h"
 
+1540699197 source:c:\users\marisa\desktop\tp3-franciscotorrilla-patch-1\figura.cpp
+	"Figura.h"
+	<iostream>
+	<string>
+	"miniwin.h"
+
+1540499552 c:\users\marisa\desktop\tp3-franciscotorrilla-patch-1\figura.h
+
+1540690854 c:\users\marisa\desktop\tp3-franciscotorrilla-patch-1\miniwin.h
+	<iostream>
+
+1540700333 source:c:\users\marisa\desktop\tp3-franciscotorrilla-patch-1\lista.cpp
+	"Lista.h"
+	<iostream>
+	<unistd.h>
+	<stdlib.h>
+	"miniwin.h"
+
+1540499552 c:\users\marisa\desktop\tp3-franciscotorrilla-patch-1\lista.h
+	"Nodo.h"
+
+1540499552 c:\users\marisa\desktop\tp3-franciscotorrilla-patch-1\nodo.h
+	"Figura.h"
+
+1540499552 source:c:\users\marisa\desktop\tp3-franciscotorrilla-patch-1\miniwin.cpp
+	<fstream>
+	<sstream>
+	<queue>
+	<math.h>
+	<process.h>
+	<windows.h>
+	<windowsx.h>
+	"miniwin.h"
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<string>
+	<queue>
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/Xos.h>
+	<X11/Xatom.h>
+	<X11/keysym.h>
+	"miniwin.h"
+
+1540499552 source:c:\users\marisa\desktop\tp3-franciscotorrilla-patch-1\nodo.cpp
+	"Nodo.h"
+
+1540689857 source:c:\users\marisa\desktop\tp3-franciscotorrilla-patch-1\main.cpp
+	"miniwin.h"
+	<iostream>
+	<fstream>
+	"Figura.h"
+	"Lista.h"
+
