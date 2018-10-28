@@ -113,9 +113,8 @@ void Lista::opciones(char i){
 
     unsigned pos;
     switch (i){
-        borra();
-		case '0':
-			break;
+	case '0':
+	    break;
         case '1':
             texto(10,465,"Ingrese la posicion");
             pos = leerNumero();
@@ -123,7 +122,7 @@ void Lista::opciones(char i){
             if (pos<=longitud)
                 consultar(pos)->mostrar();
             else
-                texto(5,5,"Ingrese la posicion");
+                texto(5,5,"No hay elemento en dicha posicion");
             break;
         case '2':
             texto(10,465,"Ingrese la posicion");
