@@ -50,7 +50,7 @@ class Lista {
         void opciones(char i);
 
         //pre: -
-        //pos: agrega una figura en la ultima posicion de la lista
+        //pos: agrega una figura en la posicion deseada de la lista
         void agregarFigura();
 
         //pre: -

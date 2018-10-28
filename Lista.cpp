@@ -1,6 +1,7 @@
 #include "Lista.h"
 #include <iostream>
 #include <unistd.h>
+#include<windows.h>
 #include <stdlib.h>
 using namespace std;
 
@@ -81,7 +82,7 @@ void Lista::menu(){
 		cin >> i;
 		system("CLS");
 		opciones(i);
-		sleep(2);
+		Sleep(2);
     	}
     }
 
